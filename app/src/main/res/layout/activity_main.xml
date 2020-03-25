@@ -6,26 +6,33 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="223dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="180dp"
-        android:onClick="getToAccelerometer"
-        android:text="@string/accelerometer_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="177dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="332dp"
-        android:onClick="getToCompass"
-        android:text="@string/compass_button"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TableRow
+        android:layout_width="375dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="124dp"
+        android:background="#FFA59989"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="186dp"
+            android:layout_height="109dp"
+            android:onClick="getToAccelerometer"
+            android:text="@string/accelerometer_button"
+            android:textColor="#A59989" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="192dp"
+            android:layout_height="109dp"
+            android:onClick="getToCompass"
+            android:text="@string/compass_button"
+            android:textColor="#A59989" />
+    </TableRow>
+
 </android.support.constraint.ConstraintLayout>

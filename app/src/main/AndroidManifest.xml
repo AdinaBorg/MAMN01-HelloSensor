@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DisplayCompassActivity">
+        <activity android:name=".DisplayCompassActivity"
+            android:screenOrientation="portrait">
            <!-- add arrow back to start page -->
             android:parentActivityName=".MainActivity">
             <meta-data

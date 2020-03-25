@@ -7,17 +7,26 @@
     tools:context=".DisplayCompassActivity">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="174dp"
-        android:layout_height="73dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/compass_header"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FA1F0F"
-        android:textSize="24sp"
+        android:id="@+id/txt_azimuth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:text="0°"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txt_azimuth"
+        app:srcCompat="@drawable/compass"
+        tools:layout_editor_absoluteX="0dp" />
+
 </android.support.constraint.ConstraintLayout>
