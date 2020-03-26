@@ -4,4 +4,10 @@
     <string name="compass_button">Compass</string>
     <string name="accelerometer_header">Accelerometer values:</string>
     <string name="compass_header">Compass</string>
+    <string name="bN">North</string>
+    <string name="bW">West</string>
+    <string name="bE">East</string>
+    <string name="bS">South</string>
+    <string name="direction_text">In what direction lays your final destination?</string>
+    <string name="progress_text">Use the Copass to find the way!</string>
 </resources>

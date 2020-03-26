@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DisplayCompassActivity">
+    tools:context=".DisplayCompassActivity"
+    android:background="@drawable/bluemap">
 
     <TextView
         android:id="@+id/txt_azimuth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
         android:gravity="center_horizontal"
         android:text="0°"
         android:textAlignment="center"
@@ -22,11 +24,76 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/txt_azimuth"
-        app:srcCompat="@drawable/compass"
-        tools:layout_editor_absoluteX="0dp" />
+        android:id="@+id/img_compass"
+        android:layout_width="397dp"
+        android:layout_height="384dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressText"
+        app:srcCompat="@drawable/compass" />
+
+    <TableRow
+        android:layout_width="357dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <Button
+            android:id="@+id/bN"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="setButtonPressed"
+            android:text="@string/bN"
+            android:textColor="#FF007396" />
+
+        <Button
+            android:id="@+id/bW"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="setButtonPressed"
+            android:text="@string/bW"
+            android:textColor="#FF007396" />
+
+        <Button
+            android:id="@+id/bE"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="setButtonPressed"
+            android:text="@string/bE"
+            android:textColor="#FF007396" />
+
+        <Button
+            android:id="@+id/bS"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:onClick="setButtonPressed"
+            android:text="@string/bS"
+            android:textColor="#FF007396" />
+    </TableRow>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="357dp"
+        android:layout_height="26dp"
+        android:text="@string/direction_text"
+        android:textColor="#003D50"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_compass" />
+
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="358dp"
+        android:layout_height="64dp"
+        android:text="@string/progress_text"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_azimuth" />
 
 </android.support.constraint.ConstraintLayout>
