@@ -30,7 +30,7 @@ public class DisplayCompassActivity extends AppCompatActivity implements SensorE
     private boolean mLastAccelerometerSet = false;
     private boolean mLastMagnetometerSet = false;
     private Vibrator v;
-    private String choosenDirection;
+    private String choosenDirection = "";
     private TextView bN, bW, bE, bS, progressText;
     private TextView[] buttons;
     private String last = "";
@@ -105,7 +105,7 @@ public class DisplayCompassActivity extends AppCompatActivity implements SensorE
         if(where.equals(choosenDirection) && !where.equals(last)) {
             v.vibrate(400);
             progressText.setText("You'r heading in the right direction!");
-            progressText.setTextColor(Color.GREEN);
+            progressText.setTextColor(Color.parseColor("#B86191"));
         }else if(!where.equals(last)) {
             progressText.setText("Use the Copass to find the way!");
             progressText.setTextColor(Color.BLACK);
@@ -159,6 +159,8 @@ public class DisplayCompassActivity extends AppCompatActivity implements SensorE
             if(haveSensor)
                 mSensorManager.unregisterListener(this,mRotationV);
         }
+        System.out.println("stoppar");
+        v.cancel();
     }
 
     @Override
@@ -172,6 +174,8 @@ public class DisplayCompassActivity extends AppCompatActivity implements SensorE
         super.onResume();
         start();
     }
+
+
 
     public void setButtonPressed(View view) {
         switch (view.getId()){
@@ -195,9 +199,7 @@ public class DisplayCompassActivity extends AppCompatActivity implements SensorE
         for (TextView button : buttons) {
             button.setTextColor(Color.parseColor("#FF007396"));
         }
-        view.setTextColor(Color.BLACK);
+        view.setTextColor(Color.parseColor("#FFB86191"));
     }
-
-
 
 }

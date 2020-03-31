@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DisplayCompassActivity"
-    android:background="@drawable/bluemap">
+    android:background="@drawable/bgcompass">
 
     <TextView
         android:id="@+id/txt_azimuth"
@@ -27,9 +27,10 @@
         android:id="@+id/img_compass"
         android:layout_width="397dp"
         android:layout_height="384dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressText"
+        app:layout_constraintTop_toBottomOf="@+id/txt_azimuth"
         app:srcCompat="@drawable/compass" />
 
     <TableRow
@@ -42,35 +43,39 @@
 
         <Button
             android:id="@+id/bN"
-            android:layout_width="wrap_content"
+            android:layout_width="88dp"
             android:layout_height="match_parent"
+            android:background="@drawable/ram2"
             android:onClick="setButtonPressed"
             android:text="@string/bN"
-            android:textColor="#FF007396" />
+            android:textColor="#005598" />
 
         <Button
             android:id="@+id/bW"
-            android:layout_width="wrap_content"
+            android:layout_width="90dp"
             android:layout_height="match_parent"
+            android:background="@drawable/ram2"
             android:onClick="setButtonPressed"
             android:text="@string/bW"
-            android:textColor="#FF007396" />
+            android:textColor="#005598" />
 
         <Button
             android:id="@+id/bE"
-            android:layout_width="wrap_content"
+            android:layout_width="89dp"
             android:layout_height="match_parent"
+            android:background="@drawable/ram2"
             android:onClick="setButtonPressed"
             android:text="@string/bE"
-            android:textColor="#FF007396" />
+            android:textColor="#005598" />
 
         <Button
             android:id="@+id/bS"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:background="@drawable/ram2"
             android:onClick="setButtonPressed"
             android:text="@string/bS"
-            android:textColor="#FF007396" />
+            android:textColor="#005598" />
     </TableRow>
 
     <TextView
@@ -78,7 +83,7 @@
         android:layout_width="357dp"
         android:layout_height="26dp"
         android:text="@string/direction_text"
-        android:textColor="#003D50"
+        android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,6 +95,7 @@
         android:layout_width="358dp"
         android:layout_height="64dp"
         android:text="@string/progress_text"
+        android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
