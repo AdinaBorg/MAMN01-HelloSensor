@@ -37,3 +37,7 @@ Compass:
 - När användaren valt en riktning och kompassen pekar i den riktningen så skrivs texten "You'r heading in the right direction!" ut i en rosa färg. När kompassen inte pekar i den valda riktningen skrivs texten "Use the Compass to find the way!" ut i svart. 
 - Kompasses visas med en annan bild än den som är given i handledningen
 - kompass-aktiviteten har fått en bakgrundsbild och knapparna har fått var sin bakgrundsbild
+
+Startsidan:
+- Lagt till en bakgrundsbild
+- Lagt till bakgrundsbilder på de två knapparna
