@@ -7,9 +7,12 @@ import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.ImageView;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import java.text.DecimalFormat;
 
@@ -17,6 +20,9 @@ import java.text.DecimalFormat;
 public class DisplayAccelerometerActivity extends AppCompatActivity implements SensorEventListener {
     private TextView xText, yText, zText;
     private ImageView image;
+    private Button chest, startButton;
+    private LinearLayout startBox;
+    private TextView congratsText;
     private Sensor mySensor;
     private SensorManager SM;
     private static DecimalFormat df = new DecimalFormat("0.00");
@@ -41,8 +47,10 @@ public class DisplayAccelerometerActivity extends AppCompatActivity implements S
         yText = (TextView)findViewById(R.id.yText);
         zText = (TextView)findViewById(R.id.zText);
         image = (ImageView)findViewById(R.id.map);
-
-
+        chest = (Button)findViewById(R.id.chest);
+        congratsText = (TextView)findViewById(R.id.congrats);
+        startButton = (Button)findViewById(R.id.startButton);
+        startBox = (LinearLayout)findViewById(R.id.startBox);
 
     }
 
@@ -77,7 +85,7 @@ public class DisplayAccelerometerActivity extends AppCompatActivity implements S
         } */
 
         //up and down
-        if(z > 5 && y < -2){
+        if(z > 0 && y < -2){
             moveDown();
         }else if(z < 5 && y > 5){
             moveUp();
@@ -100,20 +108,31 @@ public class DisplayAccelerometerActivity extends AppCompatActivity implements S
     } */
 
     public void moveLeft() {
-            image.setX(image.getX() -10);
-
+        image.setX(image.getX() -10);
+        chest.setX(chest.getX() -10);
     }
 
     public void moveRight() {
-            image.setX(image.getX() +10);
+        image.setX(image.getX() +10);
+        chest.setX(chest.getX() +10);
     }
 
     public void moveUp() {
-            image.setY(image.getY() -10);
+        image.setY(image.getY() -10);
+        chest.setY(chest.getY() -10);
     }
 
     public void moveDown() {
-            image.setY(image.getY() +10);
+        image.setY(image.getY() +10);
+        chest.setY(chest.getY() +10);
+    }
+
+    public void foundChest(View view) {
+        congratsText.setText("Congratulations! You found the Treasure!");
+    }
+
+    public void startTreasureHunt(View view) {
+        startBox.setVisibility(View.INVISIBLE);
     }
 
 
