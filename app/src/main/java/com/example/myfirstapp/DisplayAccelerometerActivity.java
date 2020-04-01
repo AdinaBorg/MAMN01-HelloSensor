@@ -86,16 +86,32 @@ public class DisplayAccelerometerActivity extends AppCompatActivity implements S
 
         //up and down
         if(z > 0 && y < -2){
-            moveDown();
+            if(y < -5) {
+                moveDown(30);
+            }else{
+                moveDown(10);
+            }
         }else if(z < 5 && y > 5){
-            moveUp();
+            if(z < 0){
+                moveUp(30);
+            }else{
+                moveUp(10);
+            }
         }
 
         //moves left or right
         if(x > 5 && y < 5) {
-            moveRight();
+            if(y < 0){
+                moveRight(30);
+            }else{
+                moveRight(10);
+            }
         }else if(x < -5 && y < 5) {
-            moveLeft();
+            if(y < 0){
+                moveLeft(30);
+            }else{
+                moveLeft(10);
+            }
         }
     }
 
@@ -107,24 +123,24 @@ public class DisplayAccelerometerActivity extends AppCompatActivity implements S
         text.setTextColor(Color.RED);
     } */
 
-    public void moveLeft() {
-        image.setX(image.getX() -10);
-        chest.setX(chest.getX() -10);
+    public void moveLeft(int speed) {
+        image.setX(image.getX() -speed);
+        chest.setX(chest.getX() -speed);
     }
 
-    public void moveRight() {
-        image.setX(image.getX() +10);
-        chest.setX(chest.getX() +10);
+    public void moveRight(int speed) {
+        image.setX(image.getX() +speed);
+        chest.setX(chest.getX() +speed);
     }
 
-    public void moveUp() {
-        image.setY(image.getY() -10);
-        chest.setY(chest.getY() -10);
+    public void moveUp(int speed) {
+        image.setY(image.getY() -speed);
+        chest.setY(chest.getY() -speed);
     }
 
-    public void moveDown() {
-        image.setY(image.getY() +10);
-        chest.setY(chest.getY() +10);
+    public void moveDown(int speed) {
+        image.setY(image.getY() +speed);
+        chest.setY(chest.getY() +speed);
     }
 
     public void foundChest(View view) {

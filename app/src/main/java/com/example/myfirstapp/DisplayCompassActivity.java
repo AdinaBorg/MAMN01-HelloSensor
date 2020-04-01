@@ -34,6 +34,7 @@ public class DisplayCompassActivity extends AppCompatActivity implements SensorE
     private TextView bN, bW, bE, bS, progressText;
     private TextView[] buttons;
     private String last = "";
+    private boolean stop = false;
 
 
 
@@ -102,7 +103,7 @@ public class DisplayCompassActivity extends AppCompatActivity implements SensorE
 
         txt_compass.setText(mAzimuth + "° " + where);
 
-        if(where.equals(choosenDirection) && !where.equals(last)) {
+        if(where.equals(choosenDirection) && !where.equals(last) && stop == false) {
             v.vibrate(400);
             progressText.setText("You'r heading in the right direction!");
             progressText.setTextColor(Color.parseColor("#B86191"));
@@ -165,12 +166,14 @@ public class DisplayCompassActivity extends AppCompatActivity implements SensorE
 
     @Override
     protected void onPause() {
+        stop = true;
         super.onPause();
         stop();
     }
 
     @Override
     protected void onResume() {
+        stop = false;
         super.onResume();
         start();
     }
