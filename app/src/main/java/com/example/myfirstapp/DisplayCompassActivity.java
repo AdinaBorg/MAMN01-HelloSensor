@@ -105,7 +105,7 @@ public class DisplayCompassActivity extends AppCompatActivity implements SensorE
 
         if(where.equals(choosenDirection) && !where.equals(last) && stop == false) {
             v.vibrate(400);
-            progressText.setText("You'r heading in the right direction!");
+            progressText.setText("You're heading in the right direction!");
             progressText.setTextColor(Color.parseColor("#B86191"));
         }else if(!where.equals(last)) {
             progressText.setText("Use the Compass to find the way!");
