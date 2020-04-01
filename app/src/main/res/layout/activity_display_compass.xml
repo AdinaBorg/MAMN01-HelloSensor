@@ -51,7 +51,7 @@
             android:background="@drawable/ram2"
             android:onClick="setButtonPressed"
             android:text="@string/bN"
-            android:textColor="#005598" />
+            android:textColor="#000000" />
 
         <Button
             android:id="@+id/bW"
@@ -60,7 +60,7 @@
             android:background="@drawable/ram2"
             android:onClick="setButtonPressed"
             android:text="@string/bW"
-            android:textColor="#005598" />
+            android:textColor="#000000" />
 
         <Button
             android:id="@+id/bE"
@@ -69,7 +69,7 @@
             android:background="@drawable/ram2"
             android:onClick="setButtonPressed"
             android:text="@string/bE"
-            android:textColor="#005598" />
+            android:textColor="#000000" />
 
         <Button
             android:id="@+id/bS"
@@ -78,7 +78,7 @@
             android:background="@drawable/ram2"
             android:onClick="setButtonPressed"
             android:text="@string/bS"
-            android:textColor="#005598" />
+            android:textColor="#000000" />
     </TableRow>
 
     <TextView

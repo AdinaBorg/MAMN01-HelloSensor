@@ -108,7 +108,7 @@ public class DisplayCompassActivity extends AppCompatActivity implements SensorE
             progressText.setText("You'r heading in the right direction!");
             progressText.setTextColor(Color.parseColor("#B86191"));
         }else if(!where.equals(last)) {
-            progressText.setText("Use the Copass to find the way!");
+            progressText.setText("Use the Compass to find the way!");
             progressText.setTextColor(Color.BLACK);
         }
         last = where;
@@ -200,7 +200,7 @@ public class DisplayCompassActivity extends AppCompatActivity implements SensorE
 
     public void setButtonFocused(TextView view) {
         for (TextView button : buttons) {
-            button.setTextColor(Color.parseColor("#FF007396"));
+            button.setTextColor(Color.parseColor("#000000"));
         }
         view.setTextColor(Color.parseColor("#FFB86191"));
     }

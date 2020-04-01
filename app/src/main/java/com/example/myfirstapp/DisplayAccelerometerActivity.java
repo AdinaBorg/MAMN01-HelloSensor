@@ -88,14 +88,18 @@ public class DisplayAccelerometerActivity extends AppCompatActivity implements S
         if(z > 0 && y < -2){
             if(y < -5) {
                 moveDown(30);
+                setTextColorRed();
             }else{
                 moveDown(10);
+                setTextColorBlack();
             }
         }else if(z < 5 && y > 5){
             if(z < 0){
                 moveUp(30);
+                setTextColorRed();
             }else{
                 moveUp(10);
+                setTextColorBlack();
             }
         }
 
@@ -103,25 +107,33 @@ public class DisplayAccelerometerActivity extends AppCompatActivity implements S
         if(x > 5 && y < 5) {
             if(y < 0){
                 moveRight(30);
+                setTextColorRed();
             }else{
                 moveRight(10);
+                setTextColorBlack();
             }
         }else if(x < -5 && y < 5) {
             if(y < 0){
                 moveLeft(30);
+                setTextColorRed();
             }else{
                 moveLeft(10);
+                setTextColorBlack();
             }
         }
     }
 
-   /** public void setTextColor(TextView text) {
+    public void setTextColorRed() {
         xText.setTextColor(Color.parseColor("#FFCC0000"));
         yText.setTextColor(Color.parseColor("#FFCC0000"));
         zText.setTextColor(Color.parseColor("#FFCC0000"));
-        if the highest number should be another color
-        text.setTextColor(Color.RED);
-    } */
+    }
+
+    public void setTextColorBlack() {
+        xText.setTextColor(Color.BLACK);
+        yText.setTextColor(Color.BLACK);
+        zText.setTextColor(Color.BLACK);
+    }
 
     public void moveLeft(int speed) {
         image.setX(image.getX() -speed);

@@ -35,7 +35,7 @@
             android:layout_marginTop="5dp"
             android:gravity="center_horizontal|left"
             android:text="X: "
-            android:textColor="#CC0000"
+            android:textColor="#000000"
             android:textSize="18sp" />
 
         <TextView
@@ -45,7 +45,7 @@
             android:layout_marginLeft="20dp"
             android:gravity="center_horizontal|left"
             android:text="Y: "
-            android:textColor="#CC0000"
+            android:textColor="#000000"
             android:textSize="18sp" />
 
         <TextView
@@ -55,7 +55,7 @@
             android:layout_marginLeft="20dp"
             android:gravity="center_horizontal|left"
             android:text="Z: "
-            android:textColor="#CC0000"
+            android:textColor="#000000"
             android:textSize="18sp" />
     </LinearLayout>
 
