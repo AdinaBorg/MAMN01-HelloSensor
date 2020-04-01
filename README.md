@@ -24,6 +24,7 @@ Accelerometer:
 - En stor bild på en skattkarta har lagts till. Användaren ser bara en del av kartan åt gången.
 - Då telefonen lutas och accelerometer-värderna uppnår ett visst krav rör sig kartan antingen uppåt, neråt, åt vänster eller åt höger. Detta gör att användaren ser en ny del av kartan. 
 - Beroende på hur mycket användaren lutar telefonen så rör sig kartan inte alls eller i någon av två olika hastigheter.
+- När kartan rör sig i den snabbaste hastigheten så ändrar textfärgen på accelerometer-värderna till röd.
 - När accelerometer-aktiviteten startas syns en ruta med instruktioner till användaren som denne sedan kan stänga ner.
 - En knapp, i form av en skattkista, är placerad på bilden av skattkartan och rör sig i kapp med kartan.
 - När användaren trycker på skattkisteknappen så visas en text
