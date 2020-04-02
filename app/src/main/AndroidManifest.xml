@@ -11,16 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".DisplayCompassActivity"
-            android:screenOrientation="portrait">
-           <!-- add arrow back to start page -->
             android:parentActivityName=".MainActivity">
+           <!-- add arrow back to start page -->
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".DisplayAccelerometerActivity">
-            <!-- add arrow back to start page -->
+        <activity android:name=".DisplayAccelerometerActivity"
             android:parentActivityName=".MainActivity">
+            <!-- add arrow back to start page -->
+
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
